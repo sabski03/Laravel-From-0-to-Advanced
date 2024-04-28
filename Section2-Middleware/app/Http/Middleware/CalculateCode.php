@@ -16,6 +16,9 @@ class CalculateCode
      */
     public function handle(Request $request, Closure $next)
     {
+        if(1 === 1){
+            return response('something');
+        }
         return $next($request);
     }
 }
