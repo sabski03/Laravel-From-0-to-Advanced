@@ -16,8 +16,7 @@ use Illuminate\Http\Request;
 Route::get('/', function (Request $request) {
     $token = $request->session()->token();
 
-    return $token;
-    //return csrf_token();
+    return view('welcome');
 });
 
 Route::post('/posts', function (){
