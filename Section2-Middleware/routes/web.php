@@ -16,4 +16,15 @@ use App\Http\Middleware\CalculateCode;
 
 Route::get('/', function () {
     return view('welcome');
-})->middleware('cal');
+});
+
+
+Route::get('/profile', function (){
+    return 'profile';
+});
+
+Route::get('/dashboard', function (){
+    return 'dashboard';
+});
+
+
