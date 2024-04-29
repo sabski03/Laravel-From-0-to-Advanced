@@ -28,7 +28,7 @@ Route::get('/', function (Request $request){
 
 //    return $request->ip();
 
-    
+
 
 });
 
