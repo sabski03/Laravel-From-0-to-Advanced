@@ -25,7 +25,6 @@
     $(document).ready(function(){
         $('#example-form').submit(function(e){
             e.preventDefault()
-
             $.ajaxSetup({
                 headers:{
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
