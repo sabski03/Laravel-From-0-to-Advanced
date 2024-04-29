@@ -43,6 +43,11 @@ Categories
 </form>
 
 
+<hr>
+
+<a href="/photos">Photos Index</a>
+
+
 
 </body>
 </html>
