@@ -34,7 +34,7 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return "STORE METHOD";
     }
 
     /**
@@ -45,7 +45,7 @@ class CategoriesController extends Controller
      */
     public function show($id)
     {
-        //
+        return "Category #". $id;
     }
 
     /**
@@ -56,7 +56,7 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
-        //
+        return "Category #" . $id . " Its being edited";
     }
 
     /**
@@ -68,7 +68,7 @@ class CategoriesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return "Category #" . $id . " Its being updated with PUT or PATCH";
     }
 
     /**
@@ -79,6 +79,6 @@ class CategoriesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return "Category #" . $id . " been deleted";
     }
 }

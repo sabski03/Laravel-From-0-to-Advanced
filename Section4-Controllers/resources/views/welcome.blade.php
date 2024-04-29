@@ -11,5 +11,38 @@
 
 Categories
 
+<h2>Categories Store Method</h2>
+
+<form action="/categories" method="post">
+    @csrf
+    <button type="submit">Submit</button>
+</form>
+
+<hr>
+<h2>Categories Show Method</h2>
+<a href="/categories/1">Show Method</a>
+
+<hr>
+<h2>Categories Edit Method</h2>
+<a href="/categories/1/edit">Edit Method</a>
+
+<hr>
+<h2>Categories PUT OR PATCH Method</h2>
+<form action="/categories/1" method="post">
+    @csrf
+    @method('put')
+    <button type="submit">PUT or PATCH Methods</button>
+</form>
+
+<hr>
+<h2>Categories Delete Method</h2>
+<form action="/categories/1" method="post">
+    @csrf
+    @method('delete')
+    <button type="submit">DELETE Method</button>
+</form>
+
+
+
 </body>
 </html>
