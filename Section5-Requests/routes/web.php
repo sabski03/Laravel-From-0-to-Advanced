@@ -28,6 +28,7 @@ Route::get('/', function (Request $request){
 
 //    return $request->ip();
 
+
 });
 
 //Route::patch('/posts/{id}', [PostsController::class, 'update']);
