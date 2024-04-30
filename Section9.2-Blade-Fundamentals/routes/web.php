@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\CalculateCode;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,16 +14,10 @@ use App\Http\Middleware\CalculateCode;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', ['username' => 'saba', 'counts' => 20, 'status' => 'active', 'datas' => [1,2,3,4,5,6,7,8,9,10]]);
+
+//    return view('welcome',
+//        ['users' => [
+//            'name' => ['saba','mari']
+//        ]]);
 });
-
-
-Route::get('/profile', function (){
-    return 'profile';
-});
-
-Route::get('/dashboard.blade.php', function (){
-    return 'dashboard.blade.php';
-});
-
-

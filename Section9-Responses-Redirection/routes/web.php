@@ -28,7 +28,7 @@ use Illuminate\Support\Facades\Route;
 //    return $request->query('id');
 //})->name('data');
 //
-//Route::get('/dashboard', function (){
+//Route::get('/dashboard.blade.php', function (){
 //    return redirect()->route('data', ['id' => 2]);
 //});
 
@@ -42,7 +42,7 @@ use Illuminate\Support\Facades\Route;
 //
 //});
 //
-//Route::get('/dashboard', [DashboardController::class, 'index']);
+//Route::get('/dashboard.blade.php', [DashboardController::class, 'index']);
 //
 //Route::get('/external', function (){
 //    return redirect()->away('https://github.com/sabski03');
@@ -53,10 +53,10 @@ use Illuminate\Support\Facades\Route;
 
 
 //Route::get('/', function (){
-//    return redirect('dashboard')->with('users','saba');
+//    return redirect('dashboard.blade.php')->with('users','saba');
 //});
 //
-//Route::get('/dashboard', [DashboardController::class, 'show']);
+//Route::get('/dashboard.blade.php', [DashboardController::class, 'show']);
 
 
 

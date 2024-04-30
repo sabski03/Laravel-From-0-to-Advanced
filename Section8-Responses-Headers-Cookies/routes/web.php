@@ -34,7 +34,7 @@ Route::get('/', function () {
 
 
 Route::middleware('cache.headers:public;max_age=86200;etag')->group(function (){
-    Route::get('/dashboard', function (){
+    Route::get('/dashboard.blade.php', function (){
 
         $user = 'Saba';
 
