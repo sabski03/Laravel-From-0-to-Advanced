@@ -2,4 +2,4 @@
 {{--    Submit--}}
 {{--</button>--}}
 
-<button>Save</button>
+<button type="{{$type}}">Save</button>
