@@ -16,6 +16,7 @@
 
 
     <div class="row mb-4">
+
         <div class="col-6 offset-3">
             <h1 class="text-center">Create User</h1>
             <form action="{{route('users.store')}}" method="post">

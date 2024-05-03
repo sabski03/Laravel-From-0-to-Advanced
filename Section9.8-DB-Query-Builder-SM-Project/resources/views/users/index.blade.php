@@ -11,6 +11,10 @@
 
     <div class="row mb-4">
         <table class="table">
+            <form action="{{ route('users.dummy') }}" method="POST">
+                @csrf
+                <button type="submit" class="btn btn-success">Create Dummy Users</button>
+            </form>
             <thead>
             <tr>
                 <th scope="col">#</th>

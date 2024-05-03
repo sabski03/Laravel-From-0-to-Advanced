@@ -8,6 +8,9 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+use Faker\Factory;
+use Illuminate\Support\Str;
+
 
 class UsersController extends Controller
 {
@@ -110,4 +113,22 @@ class UsersController extends Controller
 
         return redirect()->back();
     }
+
+    public function created_dummy_users(Request $request){
+        $faker = Factory::create();
+
+        for ($i = 0; $i < 101; $i++){
+            DB::table('users')->insert([
+                'name' => $faker->name,
+                'email' => $faker->email,
+                'password' => $faker->password(8),
+                'email_verified_at' => now(),
+                'remember_token' => Str::random(10),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
+        }
+        return redirect()->back();
+    }
+
 }

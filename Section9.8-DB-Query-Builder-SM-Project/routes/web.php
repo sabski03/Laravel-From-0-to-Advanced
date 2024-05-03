@@ -19,3 +19,5 @@ Route::get('/', function () {
 })->name('home');
 
 Route::resource('users', UsersController::class);
+
+Route::post('users/dummy', [UsersController::class, 'created_dummy_users'])->name('users.dummy');
