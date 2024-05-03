@@ -9,7 +9,7 @@
     <h1>Users</h1>
 
 
-    <div class="row">
+    <div class="row mb-4">
         <table class="table">
             <thead>
             <tr>
@@ -19,6 +19,7 @@
                 <th scope="col">Email</th>
                 <th scope="col">Created Date</th>
                 <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
             </tr>
             </thead>
             <tbody>
@@ -32,18 +33,19 @@
                     <td>
                         <a href="{{route('users.show', $user->id)}}" class="btn btn-info">Edit</a>
                     </td>
+                    <td>
+                        <form action="{{route('users.destroy', $user->id)}}" method="post">
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
             </tbody>
         </table>
     </div>
 
-@endsection
-
-@section('scripts')
-    <script>
-        console.log('users view')
-    </script>
 @endsection
 
 
