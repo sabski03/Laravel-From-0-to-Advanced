@@ -31,7 +31,7 @@ class UsersController extends Controller
 //        $users = DB::select('select * from users where id > 10 order by id asc limit 10');
 
 
-        $users = DB::table('users')->paginate(10)->;
+        $users = DB::table('users')->paginate(10);
 
 
 
