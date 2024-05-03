@@ -22,7 +22,18 @@ class UsersController extends Controller
     public function index()
     {
 
-        $users = DB::table('users')->get();
+//        $users = DB::table('users')->get();
+
+        // offset pagination
+//        $users = DB::select('select * from users order by id asc limit 10 offset 10');
+
+        // cursor pagination
+//        $users = DB::select('select * from users where id > 10 order by id asc limit 10');
+
+
+        $users = DB::table('users')->paginate(10)->;
+
+
 
         return view('users/index', compact('users'));
     }

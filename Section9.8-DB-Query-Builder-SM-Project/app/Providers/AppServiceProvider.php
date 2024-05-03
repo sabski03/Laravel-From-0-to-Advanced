@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
 
@@ -28,5 +29,7 @@ class AppServiceProvider extends ServiceProvider
             $theRules = Password::min(6)->mixedCase()->numbers();
                 return $this->app->isProduction() ? $theRules->uncompromised() : $theRules;
         });
+
+        Paginator::useBootstrap();
     }
 }

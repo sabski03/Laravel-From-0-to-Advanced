@@ -50,6 +50,8 @@
         </table>
     </div>
 
+    {{$users->links('pagination::bootstrap-4')}}
+
 @endsection
 
 
