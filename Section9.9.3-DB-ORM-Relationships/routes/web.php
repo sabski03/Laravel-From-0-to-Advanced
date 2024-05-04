@@ -27,13 +27,32 @@ Route::get('/', function () {
 //    dd(Comment::find(1)->user->name);
 
 
-    $user = [
-        'name' => "saba",
-        'email' => "saba27ge@gmail.com",
-        'password' => 'secret',
-    ];
+//    $user = [
+//        'name' => "saba",
+//        'email' => "saba27ge@gmail.com",
+//        'password' => 'secret',
+//    ];
+//
+//    $newUser = new User($user);
+//
+//    $comment = Comment::find(1)->user()->save($newUser);
 
-    $newUser = new User($user);
 
-    $comment = Comment::find(1)->user()->save($newUser);
+//    dd(User::find(1)->posts);
+//    dd(Post::find(1)->user);
+
+
+
+//    $post = new Post([
+//        'title' => 'NEW',
+//        'body' => 'BODY',
+//    ]);
+//    User::find(1)->posts()->save($post);
+
+
+
+    dd(User::find(1)->posts()->whereId(10)->delete());
+
+    return response(200);
+
 });
