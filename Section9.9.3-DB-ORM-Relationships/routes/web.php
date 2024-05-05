@@ -76,6 +76,10 @@ Route::get('/', function () {
 //    $post->push();
 
 
+
+//    dd(User::find(1)->postComment->message);
+    dd(User::find(1)->postComment[0]->message);
+
     return response(200);
 
 });

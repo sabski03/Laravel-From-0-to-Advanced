@@ -47,8 +47,27 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
-    public function comment(){
-        return $this->belongsTo(Comment::class);
+//    public function comment(){
+//        return $this->belongsTo(Comment::class);
+//    }
+
+    public function postComment(){
+//        return $this
+//            ->hasOneThrough(
+//                Comment::class,
+//                Post::class,
+//                'user_id',
+//                'post_id',
+//                'id',//users id
+//                'id' // posts id
+//            );
+
+
+        //NEWER VERSION
+//        return $this->through('posts')->has('comments');
+
+        //NEWER VERSION
+//        return $this->throughPosts()->hasComments();
     }
 
 
