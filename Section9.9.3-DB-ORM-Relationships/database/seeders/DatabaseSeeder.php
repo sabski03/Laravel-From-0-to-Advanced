@@ -19,9 +19,10 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         $this->call([
-            CommentSeeder::class,
-            PostSeeder::class,
-            UserSeeder::class,
+            RoleSeeder::class,
+//            CommentSeeder::class,
+//            PostSeeder::class,
+//            UserSeeder::class,
         ]);
 
 //        User::factory(10)->has(Post::factory()->count(2)

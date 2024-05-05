@@ -2,6 +2,7 @@
 
 use App\Models\Comment;
 use App\Models\Post;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -79,6 +80,32 @@ Route::get('/', function () {
 
 //    dd(User::find(1)->postComment->message);
 //    dd(User::find(1)->postComment[0]->message);
+
+
+
+                                //MANYTOMANY
+
+    $user = User::find(1);
+//    $user->roles()->attach(1);
+//    $user->roles()->detach(1);
+//    $user->roles()->sync([1,2]);
+//    $user->roles()->syncWithoutDetaching([1,2]);
+
+//    $user->roles()->create(['name' => 'student']);
+
+//    $role = new Role(['name' => 'teacher']);
+//    $user->roles()->save($role);
+
+
+    //remove or add a column in the role_user
+//    $user->roles()->toggle(3);
+
+
+    //delete!!!
+//    Role::destroy([4,5]);
+
+
+//    $user->roles()->updateExistingPivot(4, ['user_id' => '6']);
 
     return response(200);
 
